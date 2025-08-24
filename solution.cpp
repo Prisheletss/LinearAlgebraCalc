@@ -2,7 +2,7 @@
 # include <stdexcept>
 # include <iostream>
 # include <vector>
-# include "Funktions.h"
+# include "Functions.h"
 # include "Matrix.h"
 using namespace std;
 
@@ -45,4 +45,5 @@ int main()
     print(invers);
     */
 }
+
 
