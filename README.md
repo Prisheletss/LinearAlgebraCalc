@@ -66,13 +66,11 @@ $$
 1 & 2 \\
 3 & 4 \\
 5 & 6
-\end{pmatrix}
-*
+\end{pmatrix} *
 \begin{pmatrix}
 1 & 2 & 3 \\
 4 & 5 & 6
-\end{pmatrix}
-=
+\end{pmatrix} =
 \begin{pmatrix}
 9 & 12 & 15 \\
 19 & 26 & 33 \\
