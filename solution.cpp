@@ -10,7 +10,7 @@ using namespace std;
 int main()
 {
     /*
-    Matrix coeffs = {
+    Matrix<int> coeffs = {
         {2, -2, 3, 3},
         {3, 1, -2, -1},
         {2, 1, 3, -1},
@@ -18,7 +18,7 @@ int main()
     };
     vector<int> values = { -8, 2, -7, 5 };
 
-    calculate(coeffs, values);
+    print(calculate(coeffs, values));
     */
     
     /*
@@ -45,5 +45,6 @@ int main()
     print(invers);
     */
 }
+
 
 
