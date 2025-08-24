@@ -20,6 +20,7 @@ int main()
 
     calculate(coeffs, values);
     */
+    
     /*
     Matrix m = { 
         {1, 2}, 
@@ -33,14 +34,15 @@ int main()
     vector<int> v = { 1, 2 };
     print(m * n);
     */
-
+    
+    /*
     Matrix<int> m = { 
-        {1, 2, 2, 1}, 
-        {4, 1, 1, 4},
-        {2, 1, 2, 2},
-        {1, 1, 1, 2}
+        {1, 2, 2}, 
+        {4, 1, 1},
+        {2, 1, 2}
     };
 
     Matrix<double> invers = m.inverse();
     print(invers);
+    */
 }
