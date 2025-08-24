@@ -321,5 +321,20 @@ Matrix a = m * n;
 
 
 # Functions.h
+`Functions.h` -- is a file, that containing functions for printing vectors and matrices to the screen
 
-`Functions.h` -- is a file containing functions for printing vectors and matrices to the screen
+`void print(Matrix<T> matrix)`
+```cpp
+Matrix<int> a = { {1, 2}, {3, 4} };
+print(a);
+// 1 2
+// 3 4
+```
+___
+
+`void print(vector<T> vect)`
+```cpp
+vector<string> s = {"Hello", "\b,", "World", "\b!"};
+print(s);
+// Hello, world!
+```
