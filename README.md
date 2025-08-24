@@ -316,7 +316,7 @@ Matrix a = m * n;
 ## caolculator
 `vector<double> calculate(Matrix<T> coeffs, vector<T> values)`
 
-[This function is intended for solving SLAE]([https://github.com/Prisheletss/LinearAlgebraCalc/edit/main/README.md#solving-slae-systems-of-linear-algebraic-equasions](https://github.com/Prisheletss/LinearAlgebraCalc?tab=readme-ov-file#solving-slae-systems-of-linear-algebraic-equasions))
+[This function is intended for solving SLAE](https://github.com/Prisheletss/LinearAlgebraCalc/tree/main?tab=readme-ov-file#solving-slae-systems-of-linear-algebraic-equasions)
 
 
 
