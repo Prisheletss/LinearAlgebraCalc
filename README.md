@@ -23,7 +23,7 @@ This is equivalent to the following SLAE:
 
 $$
 \begin{cases}
-2x - 2y + 3z + 3w = -8 \\
+2x + -2y + 3z + 3w = -8 \\
 3x + y - 2z - w = 2 \\
 2x + y + 3z - w = -7 \\
 -2x - y - 2z + w = 5 
@@ -132,75 +132,98 @@ The methods of the Matrix class can be divided into the following categories:
 
 ### Initializers
 
-`Matrix()`:
-```cpp
-Matrix m;
-```
-___
-
-`Matrix(initializer_list<vector<T>> input)`:
-```cpp
-Matrix m = {
+<table>
+    <thread>
+        <tr>
+            <th scope="col">Function</th>
+            <th scope="col">Example</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <th scope="row"><code>Matrix()</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; m;
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix(initializer_list&lt;vector&lt;T&gt;&gt; input)</code></th>
+            <td><pre><code class="cpp">
+Matrix&lt;int&gt; m = { 
     {1, 2}, 
-    {3, 4}
+    {3, 4} 
 };
-```
-___
-
-`Matrix(Matrix* input)`:
-```cpp
-Matrix m = { {1, 2}, {3, 4} };
-Matrix n = m;
-```
-___
-
-`Matrix(int height, int width)`:
-```cpp
-Matrix m(2, 3);
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix(Matrix* input)</code></th>
+            <td><pre><code class="cpp">
+Matrix&lt;int&gt; m = { {1, 2}, {3, 4} };
+Matrix&lt;int&gt; n = m;
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix(int height, int width)</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; m(2, 3);
 print(m);
 //  0 0
 //  0 0
-```
+            </code></pre></td>
+        </tr>
+    </tbody>
+</table>
 
 
 ### Redactors
 
 In this topic we will look at the application of functions over m:
 ```cpp
-Matrix m = { {1, 2}, {3, 4} };
+Matrix<int> m = { {1, 2}, {3, 4} };
 ```
-\
-`void add_row(vector<T> row)` 
-```cpp
+
+<table>
+    <thread>
+        <tr>
+            <th scope="col">Function</th>
+            <th scope="col">Example</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <th scope="row"><code>void add_row(vector&lt;T&gt; row)</code></th>
+            <td><pre><code class="language-cpp">
 m.add_row( {5, 6} );
 // 1 2
 // 3 4
 // 5 6
-```
-___
-
-
-`void add_column(vector<T> column)`
-```cpp
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>void add_column(vector&lt;T&gt; column)</code></th>
+            <td><pre><code class="language-cpp">
 m.add_columt( {7, 8} );
 // 1 2 7
 // 3 4 8
-```
-___
-
-`void remove_row(int index)`
-```cpp
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>void remove_row(int index)</code></th>
+            <td><pre><code class="language-cpp">
 m.remove_row(0);
 // 3 4
-```
-___
-
-`void remove_column(int index)`
-```cpp
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>void remove_column(int index)</code></th>
+            <td><pre><code class="language-cpp">
 m.remove_column(1);
 // 1
 // 3
-```
+            </code></pre></td>
+        </tr>
+    </tbody>
+</table>
 
 
 ### investigators
@@ -210,48 +233,65 @@ In this topic we will look at the application of functions over m:
 Matrix m = { {1, 2}, {3, 4} };
 ```
 
-`vector<int> rank()`
-```cpp
-vector<int> r = m.rank();
+<table>
+    <thread>
+        <tr>
+            <th scope="col">Function</th>
+            <th scope="col">Example</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <th scope="row"><code>vector&lt;int&gt; rank()</code></th>
+            <td><pre><code class="language-cpp">
+vector&lt;int&gt; r = m.rank();
 // 2 2 -- height and width
-```
-___
-
-`vector<T> get_row(int index)`
-```cpp
-vector<int> row = m.get_row(1);
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>vector&lt;T&gt; get_row(int index)</code></th>
+            <td><pre><code class="language-cpp">
+vector&lt;int&gt; row = m.get_row(1);
 // 1 2
-```
-___
-
-`vector<T> get_column(int index)`
-```cpp
-vector<int> column = m.get_column(0);
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>vector&lt;T&gt; get_column(int index)</code></th>
+            <td><pre><code class="language-cpp">
+vector&lt;int&gt; column = m.get_column(0);
 // 1 3
-```
-___
-
-`vector<T>* operator [](int index)` 
-```cpp
-vectir<int> row = *(m[0]);
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>vector&lt;T&gt;* operator [](int index)</code></th>
+            <td><pre><code class="language-cpp">
+vector&lt;int&gt; row = *(m[0]);
 // 1 2
-```
-___
-
-`private void print()` 
-```cpp
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>private void print()</code></th>
+            <td><pre><code class="language-cpp">
 this->print();
 // 1 2
 // 3 4
-```
-___
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>private int index_converter(int index, int type)</code></th>
+            <td><pre><code class="language-cpp">
+int index = index_converter(-1);
+// 1
+            </code></pre></td>
+        </tr>
+    </tbody>
+</table>
 
-`private int index_converter(int index, int type)` \
+
 need to be able to take negative indices, and to check for out of bounds
 
 
 ### calculators
-largest category
 
 In this topic we will look at the application of functions over m, n and v:
 ```cpp
@@ -260,57 +300,76 @@ Matrix n = { {1, 0}, {0, 2} };
 vector<int> v = {5, -1};
 ```
 
-`vector<T> operator *(vector<T> other)`
-```cpp
-vector<int> u = n * v;
+<table>
+    <thread>
+        <tr>
+            <th scope="col">Function</th>
+            <th scope="col">Example</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <th scope="row"><code>vector&lt;T> operator *(vector&lt;T&gt; other)</code></th>
+            <td><pre><code class="language-cpp">
+vector&lt;int&gt; u = n * v;
 // 5 -2
-```
-___
-
-`int det()`
-```cpp
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>int det()</code></th>
+            <td><pre><code class="language-cpp">
 int d = m.det();
 // -2
-```
-___
-
-`Matrix<T> minor(int y, int x)`
-```cpp
-Matrix<int> m11 = m.minor(1, 1);
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>int det()</code></th>
+            <td><pre><code class="language-cpp">
+int d = m.det();
+// -2
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix&lt;T&gt; minor(int y, int x)</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; m11 = m.minor(1, 1);
 // 4
-```
-___
-
-`Matrix<double> inverse()`
-```cpp
-Matrix inv = n.inverse();
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix&lt;double&gt; inverse()</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; inv = n.inverse();
 // 1  0
 // 0 0.5
-```
-___
-
-`Matrix<T> operator +(Matrix<T> other)`
-```cpp
-Matrix a = m + n;
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix&lt;T&gt; operator +(Matrix&lt;T&gt; other)</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; a = m + n;
 // 2 2
 // 3 6
-```
-___
-
-`Matrix<T> operator *(T other)`
-```cpp
-Matrix a = n * 0.5f;
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix&lt;T&gt; operator *(T other)</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; a = n * 0.5f;
 // 0.5 0
 //  0  1
-```
-___
-
-`Matrix<T> operator *(Matrix<T> other)`
-```cpp
-Matrix a = m * n;
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>Matrix&lt;T&gt; operator *(Matrix&lt;T&gt; other)</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; a = m * n;
 // 1 4
 // 3 8
-```
+            </code></pre></td>
+        </tr>
+    </tbody>
+</table>
 
 
 ## calculator function
