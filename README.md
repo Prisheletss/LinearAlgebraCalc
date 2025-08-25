@@ -382,18 +382,30 @@ Matrix&lt;int&gt; a = m * n;
 # Functions.h
 `Functions.h` -- is a file, that containing functions for printing vectors and matrices to the screen
 
-`void print(Matrix<T> matrix)`
-```cpp
-Matrix<int> a = { {1, 2}, {3, 4} };
+<table>
+    <thread>
+        <tr>
+            <th scope="col">Function</th>
+            <th scope="col">Example</th>
+        </tr>
+    </thread>
+    <tbody>
+        <tr>
+            <th scope="row"><code>void print(Matrix&lt;T&gt; matrix)</code></th>
+            <td><pre><code class="language-cpp">
+Matrix&lt;int&gt; a = { {1, 2}, {3, 4} };
 print(a);
 // 1 2
 // 3 4
-```
-___
-
-`void print(vector<T> vect)`
-```cpp
-vector<string> s = {"Hello", "\b,", "World", "\b!"};
+            </code></pre></td>
+        </tr>
+        <tr>
+            <th scope="row"><code>void print(vector&lt;T&gt; vect)</code></th>
+            <td><pre><code class="language-cpp">
+vector&lt;string&gt; s = {"Hello", "\b,", "World", "\b!"};
 print(s);
 // Hello, world!
-```
+            </code></pre></td>
+        </tr>
+    </tbody>
+</table>
