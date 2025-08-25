@@ -23,7 +23,7 @@ This is equivalent to the following SLAE:
 
 $$
 \begin{cases}
-2x + -2y + 3z + 3w = -8 \\
+2x - 2y + 3z + 3w = -8 \\
 3x + y - 2z - w = 2 \\
 2x + y + 3z - w = -7 \\
 -2x - y - 2z + w = 5 
